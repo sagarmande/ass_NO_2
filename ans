@@ -1,0 +1,58 @@
+Q1. What is the relationship between classes and modules?
+- In Python, a class is a blueprint for creating objects, while a module is a file containing Python code, including classes, functions, and variables. Classes can be defined within modules or imported from other modules. Modules provide a way to organize and reuse code, and classes are often used within modules to encapsulate and structure data and behavior.
+
+Q2. How do you make instances and classes?
+- To create instances (objects) of a class in Python, you typically follow these steps:
+  1. Define a class using the `class` keyword.
+  2. Instantiate objects from the class by calling the class as if it were a function.
+
+   ```python
+   class MyClass:
+       def __init__(self, value):
+           self.value = value
+
+   # Creating instances (objects) of the class
+   obj1 = MyClass(10)
+   obj2 = MyClass(20)
+   ```
+
+Q3. Where and how should class attributes be created?
+- Class attributes are created within the class definition but outside of any methods. They are shared among all instances of the class. You can define class attributes directly under the class definition, like so:
+
+```python
+class MyClass:
+    class_attr = 0  # This is a class attribute
+```
+
+Q4. Where and how are instance attributes created?
+- Instance attributes are created within the class's methods, usually within the `__init__` method, using the `self` keyword. Instance attributes are specific to each instance of the class and are used to store unique data for each object.
+
+```python
+class MyClass:
+    def __init__(self, value):
+        self.instance_attr = value  # This is an instance attribute
+```
+
+Q5. What does the term "self" in a Python class mean?
+- In Python, `self` is a conventionally used name for the first parameter of instance methods within a class. It refers to the instance itself, allowing you to access and modify instance-specific attributes and methods. It is not a reserved keyword but is widely used for clarity and to distinguish instance attributes from local variables.
+
+Q6. How does a Python class handle operator overloading?
+- Python allows you to define special methods in your classes that correspond to built-in operators. These special methods, often called "magic methods" or "dunder methods" (short for double underscore), enable you to customize the behavior of operators for instances of your class. For example, you can overload the `+` operator by defining the `__add__` method in your class.
+
+Q7. When do you consider allowing operator overloading of your classes?
+- Operator overloading should be considered when you want to make instances of your class work with standard Python operators in a meaningful way. It's useful when you want to provide a more intuitive and natural interface for your objects, such as allowing addition, subtraction, comparison, etc., to be performed on instances of your class.
+
+Q8. What is the most popular form of operator overloading?
+- The most popular and commonly overloaded operators in Python include:
+  - `+` for addition
+  - `-` for subtraction
+  - `*` for multiplication
+  - `/` for division
+  - `==` for equality comparison
+  - `!=` for inequality comparison
+  - `>` and `<` for comparison, among others.
+
+Q9. What are the two most important concepts to grasp in order to comprehend Python OOP code?
+- The two most important concepts to grasp in order to comprehend Python Object-Oriented Programming (OOP) code are:
+  1. **Classes and Objects**: Understanding how to define classes, create objects (instances), and work with instance attributes and methods is fundamental to OOP in Python.
+  2. **Inheritance and Polymorphism**: Learning how inheritance allows you to create new classes based on existing ones (subclassing) and how polymorphism enables you to use objects of different classes in a consistent way through method overriding and interfaces.
